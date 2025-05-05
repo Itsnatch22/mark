@@ -1,0 +1,1267 @@
+export interface Product {
+    id: number;
+    name: string;
+    model: string;
+    price: string;
+    description: string;
+    image: string;
+    brand: string;
+    category?: string;
+    featured?: boolean;
+    trending?: boolean;
+    specs?: string[];
+  }
+  
+  export const allProducts: Product[] = [
+    // 💻 Laptops & Computers
+    {
+      id: 1,
+      name: "Acer Chromebook",
+      model: "Chromebook Spin 713",
+      price: "$630",
+      description: "A versatile Chromebook with a 2K display.",
+      image: "/images/acer-chromebook.jpg",
+      brand: "Acer",
+      category: "Laptops",
+      specs: ["2K display", "360° hinge", "Intel Core i5", "8GB RAM"]
+    },
+    {
+      id: 2,
+      name: "Apple MacBook Air",
+      model: "MacBook Air M1",
+      price: "$1,000",
+      description: "The thinnest and lightest MacBook with Apple's M1 chip.",
+      image: "/images/apple-macbook-air.jpg",
+      brand: "Apple",
+      category: "Laptops",
+      featured: true,
+      specs: ["M1 chip", "13.3\" Retina", "8GB RAM", "256GB SSD"]
+    },
+    {
+      id: 3,
+      name: "Dell XPS 13",
+      model: "XPS 13 9310",
+      price: "$1,200",
+      description: "A premium laptop with a stunning InfinityEdge display.",
+      image: "/images/dell-xps-13.jpg",
+      brand: "Dell",
+      featured: true,
+      category: "Laptops",
+      specs: ["11th Gen Intel", "4K UHD", "16GB RAM", "512GB SSD"]
+    },
+    {
+      id: 4,
+      name: "Lenovo ThinkPad X1 Carbon",
+      model: "X1 Carbon Gen 9",
+      price: "$1,500",
+      description: "A lightweight business laptop with a durable design.",
+      image: "/images/lenovo-thinkpad.jpg",
+      brand: "Lenovo",
+      featured: true,
+      category: "Laptops",
+      specs: ["Intel Core i7", "16GB RAM", "1TB SSD", "14\" FHD"]
+    },
+    {
+      id: 5,
+      name: "HP Spectre x360",
+      model: "Spectre x360 14",
+      price: "$1,400",
+      description: "A premium convertible laptop with a stunning design.",
+      trending: true,
+      image: "/images/hp-spectre.jpg",
+      brand: "HP",
+      category: "Laptops",
+      specs: ["Intel Core i7", "16GB RAM", "1TB SSD", "4K OLED"]
+    },
+    {
+      id: 6,
+      name: "Asus ROG Zephyrus G14",
+      model: "ROG Zephyrus G14",
+      price: "$1,500",
+      description: "A powerful gaming laptop with a compact design.",
+      image: "/images/asus-rog-zephyrus.jpg",
+      trending: true,
+      brand: "Asus",
+      category: "Laptops",
+      specs: ["AMD Ryzen 9", "RTX 3060", "16GB RAM", "1TB SSD"]
+    },
+    {
+      id: 7,
+      name: "Microsoft Surface Laptop 4",
+      model: "Surface Laptop 4",
+      price: "$1,300",
+      description: "A sleek laptop with a high-resolution touchscreen.",
+      image: "/images/microsoft-surface.jpg",
+      brand: "Microsoft",
+      category: "Laptops",
+      specs: ["Intel Core i5", "16GB RAM", "512GB SSD", "13.5\" PixelSense"]
+    },
+    {
+      id: 8,
+      name: "Razer Blade 15",
+      model: "Blade 15 Base",
+      price: "$1,600",
+      description: "A powerful gaming laptop with a sleek design.",
+      image: "/images/razer-blade.jpg",
+      brand: "Razer",
+      category: "Laptops",
+      specs: ["Intel Core i7", "RTX 3060", "16GB RAM", "512GB SSD"]
+    },
+    {
+      id: 9,
+      name: "MSI GS66 Stealth",
+      model: "GS66 Stealth 10SE",
+      price: "$1,800",
+      description: "A high-performance gaming laptop with a sleek design.",
+      image: "/images/msi-gs66.jpg",
+      brand: "MSI",
+      category: "Laptops",
+      specs: ["Intel Core i7", "RTX 3070", "16GB RAM", "1TB SSD"]
+    },
+    {
+      id: 10,
+      name: "Gigabyte AORUS 15G",
+      model: "AORUS 15G",
+      price: "$2,000",
+      description: "A powerful gaming laptop with a mechanical keyboard.",
+      image: "/images/gigabyte-aorus.jpg",
+      brand: "Gigabyte",
+      category: "Laptops",
+      specs: ["Intel Core i7", "RTX 3070", "16GB RAM", "1TB SSD"]
+    },
+    // 🎧 Audio Devices
+    {
+      id: 11,
+      name: "Apple AirPods Pro",
+      model: "AirPods Pro",
+      price: "$250",
+      description: "Wireless earbuds with active noise cancellation.",
+      image: "/images/apple-airpods-pro.jpg",
+      brand: "Apple",
+      category: "Audio",
+      trending: true,
+      specs: ["ANC", "Spatial Audio", "6hr battery", "Wireless charging"]
+    },
+    {
+      id: 12,
+      name: "Sony WH-1000XM4",
+      model: "WH-1000XM4",
+      price: "$350",
+      description: "Over-ear headphones with industry-leading noise cancellation.",
+      image: "/images/sony-wh-1000xm4.jpg",
+      brand: "Sony",
+      category: "Audio",
+      specs: ["30hr battery", "Touch controls", "Voice assistant", "Quick charge"]
+    },
+    {
+      id: 13,
+      name: "Bose QuietComfort 35 II",
+      model: "QC35 II",
+      price: "$300",
+      description: "Wireless headphones with noise cancellation and Alexa voice control.",
+      image: "/images/bose-qc35.jpg",
+      brand: "Bose",
+      category: "Audio",
+      specs: ["20hr battery", "Voice assistant", "Noise cancelling", "Comfortable fit"]
+    },
+    {
+      id: 14,
+      name: "Sennheiser HD 560S",
+      model: "HD 560S",
+      price: "$200",
+      description: "Open-back headphones with natural sound and comfort.",
+      image: "/images/sennheiser-hd560s.jpg",
+      brand: "Sennheiser",
+      category: "Audio",
+      specs: ["Open-back", "Natural sound", "Comfortable fit", "Detachable cable"]
+    },
+    {
+      id: 15,
+      name: "JBL Charge 5",
+      model: "Charge 5",
+      price: "$180",
+      description: "Portable Bluetooth speaker with powerful sound.",
+      image: "/images/jbl-charge5.jpg",
+      brand: "JBL",
+      category: "Audio",
+      specs: ["30hr battery", "IP67 waterproof", "PartyBoost", "USB-C charging"]
+    },
+    {
+      id: 16,
+      name: "Bang & Olufsen Beoplay H95",
+      model: "H95",
+      price: "$800",
+      description: "Luxury over-ear headphones with adaptive noise cancellation.",
+      image: "/images/bang-olufsen-h95.jpg",
+      brand: "Bang & Olufsen",
+      category: "Audio",
+      specs: ["38hr battery", "Adaptive ANC", "Touch controls", "Luxury design"]
+    },
+    {
+      id: 17,
+      name: "Apple HomePod mini",
+      model: "HomePod mini",
+      price: "$100",
+      description: "Smart speaker with Siri and great sound.",
+      image: "/images/apple-homepod-mini.jpg",
+      brand: "Apple",
+      category: "Audio",
+      specs: ["Siri", "360° sound", "Intercom", "Compact design"]
+    },
+    {
+      id: 18,
+      name: "Sonos One",
+      model: "One",
+      price: "$200",
+      description: "Smart speaker with Alexa and Google Assistant.",
+      image: "/images/sonos-one.jpg",
+      brand: "Sonos",
+      category: "Audio",
+      specs: ["Voice control", "Multi-room", "Trueplay tuning", "Compact design"]
+    },
+    {
+      id: 19,
+      name: "Bose SoundLink Revolve+",
+      model: "SoundLink Revolve+",
+      price: "$300",
+      description: "Portable Bluetooth speaker with 360° sound.",
+      image: "/images/bose-soundlink-revolve.jpg",
+      brand: "Bose",
+      category: "Audio",
+      specs: ["17hr battery", "IP55 water-resistant", "Voice prompts", "Speakerphone"]
+    },
+    {
+      id: 20,
+      name: "Ultimate Ears BOOM 3",
+      model: "BOOM 3",
+      price: "$150",
+      description: "Portable Bluetooth speaker with deep bass and 360° sound.",
+      image: "/images/ultimate-ears-boom3.jpg",
+      brand: "Ultimate Ears",
+      category: "Audio",
+      specs: ["15hr battery", "IP67 waterproof", "PartyUp", "Custom EQ"]
+    },
+  
+    // 📱 Tablets & Phones
+    {
+      id: 21,
+      name: "Apple iPad",
+      model: "iPad Pro 12.9",
+      price: "$1,100",
+      description: "The most advanced iPad with 5G connectivity.",
+      image: "/images/apple-ipad-pro.jpg",
+      brand: "Apple",
+      category: "Tablets",
+      featured: true,
+      specs: ["12.9\" Liquid Retina", "M1 chip", "5G", "Face ID"]
+    },
+    {
+      id: 22,
+      name: "Apple iPhone",
+      model: "iPhone 12 Pro",
+      price: "$1,000",
+      description: "The latest iPhone with a Super Retina XDR display.",
+      image: "/images/apple-iphone-12-pro.jpg",
+      brand: "Apple",
+      category: "Smartphones",
+      specs: ["6.1\" Super Retina", "A14 Bionic", "5G", "Triple camera"]
+    },
+    {
+      id: 23,
+      name: "Samsung Galaxy Tab S7",
+      model: "Galaxy Tab S7",
+      price: "$650",
+      description: "A powerful Android tablet with a stunning display.",
+      image: "/images/samsung-galaxy-tab-s7.jpg",
+      brand: "Samsung",
+      category: "Tablets",
+      specs: ["11\" LCD", "Snapdragon 865+", "S Pen included", "120Hz refresh rate"]
+    },
+    {
+      id: 24,
+      name: "Google Pixel 5",
+      model: "Pixel 5",
+      price: "$700",
+      description: "The latest Google phone with an amazing camera.",
+      image: "/images/google-pixel-5.jpg",
+      brand: "Google",
+      category: "Smartphones",
+      specs: ["6.0\" OLED", "Snapdragon 765G", "5G", "12.2MP dual camera"]
+    },
+    {
+      id: 25,
+      name: "Microsoft Surface Pro 7",
+      model: "Surface Pro 7",
+      price: "$800",
+      description: "A versatile 2-in-1 tablet with a detachable keyboard.",
+      image: "/images/microsoft-surface-pro-7.jpg",
+      brand: "Microsoft",
+      category: "Tablets",
+      specs: ["12.3\" PixelSense", "Intel Core i5", "8GB RAM", "128GB SSD"]
+    },
+    {
+      id: 26,
+      name: "OnePlus Nord N200",
+      model: "Nord N200",
+      price: "$250",
+      description: "A budget-friendly smartphone with 5G connectivity.",
+      image: "/images/oneplus-nord-n200.jpg",
+      brand: "OnePlus",
+      category: "Smartphones",
+      specs: ["6.49\" LCD", "Snapdragon 480", "5G", "5000mAh battery"]
+    },
+    {
+      id: 27,
+      name: "Samsung Galaxy S21",
+      model: "Galaxy S21",
+      price: "$800",
+      description: "The latest Samsung phone with a stunning display.",
+      image: "/images/samsung-galaxy-s21.jpg",
+      brand: "Samsung",
+      category: "Smartphones",
+      specs: ["6.2\" AMOLED", "Exynos 2100", "5G", "Triple camera"]
+    },
+    {
+      id: 28,
+      name: "Apple iPhone SE",
+      model: "iPhone SE (2020)",
+      price: "$400",
+      description: "A compact smartphone with powerful performance.",
+      image: "/images/apple-iphone-se.jpg",
+      brand: "Apple",
+      category: "Smartphones",
+      specs: ["4.7\" Retina", "A13 Bionic", "Touch ID", "12MP camera"]
+    },
+    {
+      id: 29,
+      name: "Google Pixel 4a",
+      model: "Pixel 4a",
+      price: "$350",
+      description: "A budget-friendly smartphone with an amazing camera.",
+      image: "/images/google-pixel-4a.jpg",
+      brand: "Google",
+      category: "Smartphones",
+      specs: ["5.8\" OLED", "Snapdragon 730G", "12.2MP camera", "Adaptive Battery"]
+    },
+    {
+      id: 30,
+      name: "Samsung Galaxy A52",
+      model: "Galaxy A52",
+      price: "$400",
+      description: "A mid-range smartphone with a stunning display.",
+      image: "/images/samsung-galaxy-a52.jpg",
+      brand: "Samsung",
+      category: "Smartphones",
+      specs: ["6.5\" AMOLED", "Snapdragon 720G", "Quad camera", "4500mAh battery"]
+    },
+  
+    // 🖥️ Monitors
+    {
+      id: 31,
+      name: "Dell UltraSharp 27\"",
+      model: "U2723QE",
+      price: "$650",
+      description: "4K UltraSharp monitor with vivid color accuracy.",
+      image: "/images/dell-ultrasharp.jpg",
+      brand: "Dell",
+      category: "Monitors",
+      specs: ["4K UHD", "99% sRGB", "USB-C", "Height adjustable"]
+    },
+    {
+      id: 32,
+      name: "LG UltraFine 5K",
+      model: "27MD5KL-B",
+      price: "$1,300",
+      description: "5K monitor with Thunderbolt 3 connectivity.",
+      image: "/images/lg-ultrafine.jpg",
+      brand: "LG",
+      category: "Monitors",
+      specs: ["5K", "Thunderbolt 3", "P3 wide color", "Built-in camera"]
+    },
+    {
+      id: 33,
+      name: "ASUS ProArt PA32UCX",
+      model: "PA32UCX-PK",
+      price: "$3,000",
+      description: "Professional 4K HDR monitor with mini-LED backlight.",
+      image: "/images/asus-proart.jpg",
+      brand: "ASUS",
+      category: "Monitors", 
+      specs: ["4K HDR", "mini-LED", "Thunderbolt 3", "99% Adobe RGB"]
+    },
+    {
+      id: 34,
+      name: "BenQ PD3220U",
+      model: "PD3220U",
+      price: "$1,200",
+      description: "4K monitor with HDR support and USB-C connectivity.",
+      image: "/images/benq-pd3220u.jpg",
+      brand: "BenQ",
+      category: "Monitors",
+      specs: ["4K UHD", "HDR10", "USB-C", "DualView"]
+    },
+    {
+      id: 35,
+      name: "Samsung Odyssey G7",
+      model: "LC32G75TQSNXZA",
+      price: "$700",
+      description: "Curved gaming monitor with QLED technology.",
+      image: "/images/samsung-odyssey-g7.jpg",
+      brand: "Samsung",
+      category: "Monitors",
+      specs: ["32\" QHD", "240Hz", "G-Sync", "HDR600"]
+    },
+    {
+      id: 36,
+      name: "Acer Predator X27",
+      model: "X27",
+      price: "$1,600",
+      description: "4K gaming monitor with G-Sync Ultimate.",
+      image: "/images/acer-predator-x27.jpg",
+      brand: "Acer",
+      category: "Monitors",
+      specs: ["4K UHD", "144Hz", "G-Sync Ultimate", "HDR1000"]
+    },
+    {
+      id: 37,
+      name: "LG 34WN80C-B",
+      model: "34WN80C-B",
+      price: "$700",
+      description: "34\" UltraWide QHD monitor with USB-C connectivity.",
+      image: "/images/lg-34wn80c.jpg",
+      brand: "LG",
+      category: "Monitors",
+      specs: ["34\" QHD", "USB-C", "HDR10", "99% sRGB"]
+    },
+    {
+      id: 38,
+      name: "Dell P2720DC",
+      model: "P2720DC",
+      price: "$500",
+      description: "27\" QHD monitor with USB-C connectivity.",
+      image: "/images/dell-p2720dc.jpg",
+      brand: "Dell",
+      category: "Monitors",
+      specs: ["QHD", "USB-C", "Height adjustable", "Flicker-free"]
+    },
+    {
+      id: 39,
+      name: "ASUS ROG Swift PG32UQ",
+      model: "PG32UQ",
+      price: "$1,000",
+      description: "32\" 4K gaming monitor with G-Sync.",
+      image: "/images/asus-rog-swift.jpg",  
+      brand: "ASUS",
+      category: "Monitors",
+      specs: ["32\" 4K", "144Hz", "G-Sync", "HDR600"]
+    },
+    {
+      id: 40,
+      name: "Acer R240HY",
+      model: "R240HY",
+      price: "$150",
+      description: "23.8\" Full HD monitor with IPS technology.",
+      image: "/images/acer-r240hy.jpg",
+      brand: "Acer",
+      category: "Monitors",
+      specs: ["23.8\" FHD", "IPS", "Zero Frame", "VESA mountable"]
+    },
+  
+    // 🖨️ Printers
+    {
+      id: 41,
+      name: "HP LaserJet Pro M404dn",
+      model: "LaserJet Pro M404dn",
+      price: "$250",
+      description: "High-speed monochrome laser printer.",
+      image: "/images/hp-laserjet.jpg",
+      brand: "HP",
+      category: "Printers",
+      specs: ["40ppm", "Duplex", "Ethernet", "250-sheet tray"]
+    },
+    {
+      id: 42,
+      name: "Canon PIXMA TR8620",
+      model: "PIXMA TR8620",
+      price: "$180",
+      description: "All-in-one inkjet printer with wireless connectivity.",
+      image: "/images/canon-pixma.jpg",
+      brand: "Canon",
+      category: "Printers",
+      specs: ["5-color", "Wireless", "Auto duplex", "4.3\" touchscreen"]
+    },
+    {
+      id: 43,
+      name: "Brother MFC-L3770CDW",
+      model: "MFC-L3770CDW",
+      price: "$400",
+      description: "Color laser all-in-one printer with duplex printing.",
+      image: "/images/brother-mfc.jpg",
+      brand: "Brother",
+      category: "Printers",
+      specs: ["25ppm", "Duplex", "Wireless", "Touchscreen"]
+    },
+    {
+      id: 44,
+      name: "Epson EcoTank ET-4760",
+      model: "EcoTank ET-4760",
+      price: "$500",
+      description: "All-in-one supertank printer with low-cost printing.",
+      image: "/images/epson-ecotank.jpg",
+      brand: "Epson",
+      category: "Printers",
+      specs: ["15ppm", "Duplex", "Wireless", "2-year ink supply"]
+    },
+    {
+      id: 45,
+      name: "Xerox Phaser 6510",
+      model: "Phaser 6510",
+      price: "$300",
+      description: "Color laser printer with high-quality output.",
+      image: "/images/xerox-phaser.jpg",
+      brand: "Xerox",
+      category: "Printers",
+      specs: ["30ppm", "Duplex", "Wireless", "Vibrant color"]
+    },
+    {
+      id: 46,
+      name: "Lexmark MB2236adw",
+      model: "MB2236adw",
+      price: "$200",
+      description: "Monochrome laser all-in-one printer with wireless connectivity.",
+      image: "/images/lexmark-mb2236adw.jpg",
+      brand: "Lexmark",
+      category: "Printers",
+      specs: ["36ppm", "Duplex", "Wireless", "Compact design"]
+    },
+    {
+      id: 47,
+      name: "Ricoh SP C261DNw",
+      model: "SP C261DNw",
+      price: "$250",
+      description: "Compact color laser printer with wireless connectivity.",
+      image: "/images/ricoh-sp-c261dnw.jpg",
+      brand: "Ricoh",
+      category: "Printers",
+      specs: ["21ppm", "Duplex", "Wireless", "Compact design"]
+    },
+    {
+      id: 48,
+      name: "Kyocera ECOSYS P5026cdw",
+      model: "ECOSYS P5026cdw",
+      price: "$300",
+      description: "Color laser printer with low-cost printing.",
+      image: "/images/kyocera-ecosys.jpg",
+      brand: "Kyocera",
+      category: "Printers",
+      specs: ["26ppm", "Duplex", "Wireless", "Low cost per page"]
+    },
+    {
+      id: 49,
+      name: "Panasonic KX-MC6000",
+      model: "KX-MC6000",
+      price: "$400",
+      description: "All-in-one color laser printer with high-quality output.",
+      image: "/images/panasonic-kx-mc6000.jpg",
+      brand: "Panasonic",
+      category: "Printers",
+      specs: ["30ppm", "Duplex", "Wireless", "High-quality color"]
+    },
+    {
+      id: 50,
+      name: "Dell E310dw",
+      model: "E310dw",
+      price: "$150",
+      description: "Compact monochrome laser printer with wireless connectivity.",
+      image: "/images/dell-e310dw.jpg",
+      brand: "Dell",
+      category: "Printers",
+      specs: ["27ppm", "Duplex", "Wireless", "Compact design"]
+    },
+  
+    // 🛜 Networking
+    {
+      id: 51,
+      name: "TP-Link Archer AX73",
+      model: "Archer AX73",
+      price: "$180",
+      description: "WiFi 6 router with high-speed connectivity.",
+      image: "/images/tp-link-archer.jpg",
+      brand: "TP-Link",
+      category: "Networking",
+      specs: ["AX5400", "8 streams", "2.5G port", "OFDMA"]
+    },
+    {
+      id: 52,
+      name: "Netgear Nighthawk RAX80",
+      model: "RAX80",
+      price: "$300",
+      description: "WiFi 6 router with advanced features.",
+      image: "/images/netgear-nighthawk.jpg",
+      brand: "Netgear",
+      category: "Networking",
+      specs: ["AX6000", "8 streams", "2.5G port", "OFDMA"]
+    },
+    {
+      id: 53,
+      name: "Asus RT-AX88U",
+      model: "RT-AX88U",
+      price: "$250",
+      description: "WiFi 6 router with high-speed connectivity.",
+      image: "/images/asus-rt-ax88u.jpg",
+      brand: "Asus",
+      category: "Networking",
+      specs: ["AX6000", "8 streams", "2.5G port", "OFDMA"]
+    },
+    {
+      id: 54,
+      name: "Linksys Velop MX10",
+      model: "MX10",
+      price: "$500",
+      description: "Mesh WiFi system with high-speed connectivity.",
+      image: "/images/linksys-velop.jpg",
+      brand: "Linksys",
+      category: "Networking",
+      specs: ["AX6000", "Mesh", "2.5G port", "OFDMA"]
+    },
+    {
+      id: 55,
+      name: "Google Nest Wifi Pro",
+      model: "Nest Wifi Pro",
+      price: "$200",
+      description: "Mesh WiFi system with smart home integration.",
+      image: "/images/google-nest-wifi.jpg",
+      brand: "Google",
+      category: "Networking",
+      specs: ["AX5400", "Mesh", "Smart home integration", "Easy setup"]
+    },
+    {
+      id: 56,
+      name: "Ubiquiti UniFi Dream Machine",
+      model: "Dream Machine",
+      price: "$300",
+      description: "All-in-one router and security gateway.",
+      image: "/images/ubiquiti-unifi.jpg",
+      brand: "Ubiquiti",
+      category: "Networking",
+      specs: ["AX6000", "Mesh", "Security gateway", "Easy setup"]
+    },
+    {
+      id: 57,
+      name: "D-Link DIR-X5460",
+      model: "DIR-X5460",
+      price: "$150",
+      description: "WiFi 6 router with high-speed connectivity.",
+      image: "/images/d-link-dir-x5460.jpg",
+      brand: "D-Link",
+      category: "Networking",
+      specs: ["AX5400", "8 streams", "2.5G port", "OFDMA"]
+    },
+    {
+      id: 58,
+      name: "TP-Link Deco X60",
+      model: "Deco X60",
+      price: "$250",
+      description: "Mesh WiFi system with high-speed connectivity.",
+      image: "/images/tp-link-deco.jpg",
+      brand: "TP-Link",
+      category: "Networking",
+      specs: ["AX3000", "Mesh", "2.5G port", "OFDMA"]
+    },
+    {
+      id: 59,
+      name: "Netgear Orbi RBK852",
+      model: "RBK852",
+      price: "$700",
+      description: "Mesh WiFi system with high-speed connectivity.",
+      image: "/images/netgear-orbi.jpg",
+      brand: "Netgear",
+      category: "Networking",
+      specs: ["AX6000", "Mesh", "2.5G port", "OFDMA"]
+    },
+    {
+      id: 60,
+      name: "Asus ZenWiFi AX6600",
+      model: "AX6600",
+      price: "$400",
+      description: "Mesh WiFi system with high-speed connectivity.",
+      image: "/images/asus-zenwifi.jpg",
+      brand: "Asus",
+      category: "Networking",
+      specs: ["AX6600", "Mesh", "2.5G port", "OFDMA"]
+    },
+  
+    // 💾 Storage
+    {
+      id: 61,
+      name: "Samsung 970 EVO Plus 1TB",
+      model: "970 EVO Plus",
+      price: "$120",
+      description: "High-speed NVMe SSD for performance computing.",
+      image: "/images/samsung-ssd.jpg",
+      brand: "Samsung",
+      category: "Storage",
+      trending: true,
+      specs: ["1TB", "3500MB/s", "NVMe", "5yr warranty"]
+    },
+    {
+      id: 62,
+      name: "Western Digital My Passport 4TB",
+      model: "My Passport",
+      price: "$100",
+      description: "Portable external hard drive with backup software.",
+      image: "/images/wd-my-passport.jpg",
+      brand: "Western Digital",
+      category: "Storage",
+      specs: ["4TB", "USB 3.0", "Auto backup", "Password protection"],
+      trending: true,
+    },
+    {
+      id: 63,
+      name: "Seagate Backup Plus Slim 2TB",
+      model: "Backup Plus Slim",
+      price: "$80",
+      description: "Portable external hard drive with backup software.",
+      image: "/images/seagate-backup-plus.jpg",
+      brand: "Seagate",
+      category: "Storage",
+      specs: ["2TB", "USB 3.0", "Auto backup", "Password protection"]
+    },
+    {
+      id: 64,
+      name: "Crucial MX500 1TB",
+      model: "MX500",
+      price: "$100",
+      description: "SATA SSD for fast storage and performance.",
+      image: "/images/crucial-mx500.jpg",
+      brand: "Crucial",
+      category: "Storage",
+      specs: ["1TB", "550MB/s", "SATA III", "5yr warranty"]
+    },
+    {
+      id: 65,
+      name: "SanDisk Extreme Pro 1TB",
+      model: "Extreme Pro",
+      price: "$150",
+      description: "High-speed portable SSD for performance computing.",
+      image: "/images/sandisk-extreme-pro.jpg",
+      brand: "SanDisk",
+      category: "Storage",
+      specs: ["1TB", "1050MB/s", "USB-C", "Water-resistant"],
+      trending: true,
+    },
+    {
+      id: 66,
+      name: "Toshiba Canvio Basics 2TB",
+      model: "Canvio Basics",
+      price: "$70",
+      description: "Portable external hard drive with USB 3.0 connectivity.",
+      image: "/images/toshiba-canvio.jpg",
+      brand: "Toshiba",
+      category: "Storage",
+      specs: ["2TB", "USB 3.0", "Compact design", "Plug and play"],
+      featured: true,
+    },
+    {
+      id: 67,
+      name: "LaCie Rugged SSD 1TB",
+      model: "Rugged SSD",
+      price: "$200",
+      description: "Durable portable SSD for on-the-go storage.",
+      image: "/images/lacie-rugged.jpg",
+      brand: "LaCie",
+      category: "Storage",
+      specs: ["1TB", "950MB/s", "USB-C", "Shock-resistant"]
+    },
+    {
+      id: 68,
+      name: "ADATA XPG SX8200 Pro 1TB",
+      model: "SX8200 Pro",
+      price: "$120",
+      description: "High-speed NVMe SSD for gaming and performance.",
+      image: "/images/adata-sx8200.jpg",
+      brand: "ADATA",
+      category: "Storage",
+      specs: ["1TB", "3500MB/s", "NVMe", "5yr warranty"]
+    },
+    {
+      id: 69,
+      name: "Transcend StoreJet 25M3 2TB",
+      model: "StoreJet 25M3",
+      price: "$80",
+      description: "Portable external hard drive with shock resistance.",
+      image: "/images/transcend-storejet.jpg",
+      brand: "Transcend",
+      category: "Storage",
+      specs: ["2TB", "USB 3.0", "Shock-resistant", "One-touch backup"]
+    },
+    {
+      id: 70,
+      name: "G-Technology G-Drive Mobile 1TB",
+      model: "G-Drive Mobile",
+      price: "$150",
+      description: "Portable external hard drive with USB-C connectivity.",
+      image: "/images/g-technology-g-drive.jpg",
+      brand: "G-Technology",
+      category: "Storage",
+      specs: ["1TB", "USB-C", "Compact design", "Plug and play"]
+    },
+    // 🔌 Power Solutions
+    {
+      id: 71,
+      name: "APC Smart-UPS 1500VA",
+      model: "Smart-UPS 1500VA",
+      price: "$500",
+      description: "Reliable backup power for critical devices.",
+      image: "/images/apc-ups.jpg",
+      trending: true,
+      brand: "APC",
+      category: "Power",
+      specs: ["1500VA", "Pure sine wave", "LCD display", "Rack-mountable"]
+    },
+    {
+      id: 72,
+      name: "CyberPower CP1500PFCLCD",
+      model: "CP1500PFCLCD",
+      price: "$200",
+      description: "Compact UPS with pure sine wave output.",
+      image: "/images/cyberpower-ups.jpg",
+      brand: "CyberPower",
+      category: "Power",
+      specs: ["1500VA", "Pure sine wave", "LCD display", "Compact design"]
+    },
+    {
+      id: 73,
+      name: "Tripp Lite SMART1500LCDT",
+      model: "SMART1500LCDT",
+      price: "$250",
+      description: "Compact UPS with LCD display and USB charging.",
+      image: "/images/tripp-lite-ups.jpg",
+      brand: "Tripp Lite",
+      category: "Power",
+      specs: ["1500VA", "LCD display", "USB charging", "Compact design"]
+    },
+    {
+      id: 74,
+      name: "Eaton 5S 1500VA",
+      model: "5S 1500VA",
+      price: "$300",
+      description: "Compact UPS with LCD display and USB charging.",
+      image: "/images/eaton-ups.jpg",
+      brand: "Eaton",
+      category: "Power",
+      specs: ["1500VA", "LCD display", "USB charging", "Compact design"]
+    },
+    {
+      id: 75,
+      name: "Vertiv Liebert PSI5-1000RT120",
+      model: "PSI5-1000RT120",
+      price: "$400",
+      description: "Reliable backup power for critical devices.",
+      image: "/images/vertiv-ups.jpg",
+      brand: "Vertiv",
+      category: "Power",
+      specs: ["1000VA", "Pure sine wave", "LCD display", "Rack-mountable"]
+    },
+    {
+      id: 76,
+      name: "Liebert GXT5-1500RT120",
+      model: "GXT5-1500RT120",
+      price: "$600",
+      description: "High-performance UPS with pure sine wave output.",
+      image: "/images/liebert-ups.jpg",
+      brand: "Liebert",
+      category: "Power",
+      specs: ["1500VA", "Pure sine wave", "LCD display", "Rack-mountable"]
+    },
+    {
+      id: 77,
+      name: "Tripp Lite SMART500LCDT",
+      model: "SMART500LCDT",
+      price: "$150",
+      description: "Compact UPS with LCD display and USB charging.",
+      image: "/images/tripp-lite-smart500.jpg",
+      brand: "Tripp Lite",
+      category: "Power",
+      specs: ["500VA", "LCD display", "USB charging", "Compact design"]
+    },
+    {
+      id: 78,
+      name: "CyberPower CP1000PFCLCD",
+      model: "CP1000PFCLCD",
+      price: "$180",
+      description: "Compact UPS with pure sine wave output.",
+      image: "/images/cyberpower-cp1000.jpg",
+      brand: "CyberPower",
+      category: "Power",
+      specs: ["1000VA", "Pure sine wave", "LCD display", "Compact design"]
+    },
+    {
+      id: 79,
+      name: "APC Back-UPS Pro 1500VA",
+      model: "Back-UPS Pro 1500VA",
+      price: "$200",
+      description: "Reliable backup power for critical devices.",
+      image: "/images/apc-back-ups.jpg",
+      brand: "APC",
+      category: "Power",
+      specs: ["1500VA", "Pure sine wave", "LCD display", "Compact design"]
+    },
+    {
+      id: 80,
+      name: "Eaton 9PX 1500VA",
+      model: "9PX 1500VA",
+      price: "$500",
+      description: "High-performance UPS with pure sine wave output.",
+      image: "/images/eaton-9px.jpg",
+      brand: "Eaton",
+      category: "Power",
+      specs: ["1500VA", "Pure sine wave", "LCD display", "Rack-mountable"]
+    },
+  
+    // 🖱️ Peripherals
+    {
+      id: 81,
+      name: "Logitech MX Master 3S",
+      model: "MX Master 3S",
+      price: "$99",
+      description: "Precision wireless mouse with ergonomic design.",
+      image: "/images/logitech-mx-master.jpg",
+      brand: "Logitech",
+      category: "Peripherals",
+      trending: true,
+      specs: ["8000 DPI", "7 buttons", "70 days battery", "Darkfield"]
+    },
+    {
+      id: 82,
+      name: "Razer Huntsman Elite",
+      model: "Huntsman Elite",
+      price: "$200",
+      description: "Mechanical gaming keyboard with customizable RGB lighting.",
+      image: "/images/razer-huntsman.jpg",
+      brand: "Razer",
+      category: "Peripherals",
+      specs: ["Opto-mechanical", "RGB", "Ergonomic wrist rest", "Customizable"]
+    },
+    {
+      id: 83,
+      name: "Corsair K95 RGB Platinum",
+      model: "K95 RGB Platinum",
+      price: "$200",
+      description: "Mechanical gaming keyboard with customizable RGB lighting.",
+      image: "/images/corsair-k95.jpg",
+      brand: "Corsair",
+      category: "Peripherals",
+      specs: ["Cherry MX", "RGB", "Macro keys", "Customizable"]
+    },
+    {
+      id: 84,
+      name: "Logitech G502 HERO",
+      model: "G502 HERO",
+      price: "$80",
+      description: "High-performance gaming mouse with customizable weights.",
+      image: "/images/logitech-g502.jpg",
+      brand: "Logitech",
+      category: "Peripherals",
+      specs: ["16000 DPI", "11 buttons", "Customizable weights", "RGB"]
+    },
+    {
+      id: 85,
+      name: "SteelSeries QcK Gaming Mouse Pad",
+      model: "QcK Gaming Mouse Pad",
+      price: "$20",
+      description: "High-quality gaming mouse pad with a smooth surface.",
+      image: "/images/steelseries-qck.jpg",
+      brand: "SteelSeries",
+      category: "Peripherals",
+      specs: ["Large size", "Smooth surface", "Non-slip base", "Durable"]
+    },
+    {
+      id: 86,
+      name: "HyperX Cloud II Gaming Headset",
+      model: "Cloud II Gaming Headset",
+      price: "$100",
+      description: "Comfortable gaming headset with virtual 7.1 surround sound.",
+      image: "/images/hyperx-cloud-ii.jpg",
+      brand: "HyperX",
+      category: "Peripherals",
+      specs: ["53mm drivers", "7.1 surround sound", "Memory foam", "Detachable mic"]
+    },
+    {
+      id: 87,
+      name: "Razer Black Widow V3",
+      model: "Black Widow V3",
+      price: "$170",
+      description: "Mechanical gaming keyboard with customizable RGB lighting.",
+      image: "/images/razer-black-widow.jpg",
+      brand: "Razer",
+      category: "Peripherals",
+      specs: ["Green switches", "RGB", "Ergonomic wrist rest", "Customizable"],
+      featured: true,
+    },
+    {
+      id: 88,
+      name: "Logitech G Pro X Gaming Headset",
+      model: "G Pro X",
+      price: "$130",
+      description: "Professional gaming headset with Blue VO!CE technology.",
+      image: "/images/logitech-g-pro-x.jpg",
+      brand: "Logitech",
+      category: "Peripherals",
+      specs: ["50mm drivers", "Blue VO!CE", "Memory foam", "Detachable mic"]
+    },
+    {
+      id: 89,
+      name: "Corsair K55 RGB Gaming Keyboard",
+      model: "K55 RGB",
+      price: "$50",
+      description: "RGB gaming keyboard with customizable lighting.",
+      image: "/images/corsair-k55.jpg",
+      brand: "Corsair",
+      category: "Peripherals",
+      specs: ["Membrane", "RGB", "Macro keys", "Customizable"]
+    },
+    {
+      id: 90,
+      name: "Razer DeathAdder V2",
+      model: "DeathAdder V2",
+      price: "$70",
+      description: "High-performance gaming mouse with ergonomic design.",
+      image: "/images/razer-deathadder.jpg",
+      brand: "Razer",
+      category: "Peripherals",
+      specs: ["20000 DPI", "8 buttons", "Ergonomic design", "RGB"]
+    },
+  
+    // 🎮 Gaming
+    {
+      id: 91,
+      name: "Sony PlayStation 5",
+      model: "PS5",
+      price: "$500",
+      description: "The next-generation gaming console from Sony.",
+      image: "/images/sony-ps5.jpg",
+      brand: "Sony",
+      category: "Gaming",
+      featured: true,
+      specs: ["4K 120Hz", "825GB SSD", "Ray tracing", "Backward compatible"]
+    },
+    {
+      id: 92,
+      name: "Microsoft Xbox Series X",
+      model: "Xbox Series X",
+      price: "$500",
+      description: "The most powerful gaming console from Microsoft.",
+      image: "/images/microsoft-xbox-series-x.jpg",
+      brand: "Microsoft",
+      category: "Gaming",
+      specs: ["4K 120Hz", "1TB SSD", "Ray tracing", "Backward compatible"]
+    },
+    {
+      id: 93,
+      name: "Nintendo Switch OLED",
+      model: "Switch OLED",
+      price: "$350",
+      description: "The latest Nintendo Switch with an OLED display.",
+      image: "/images/nintendo-switch-oled.jpg",
+      brand: "Nintendo",
+      category: "Gaming",
+      specs: ["7\" OLED", "64GB storage", "Handheld mode", "Joy-Con controllers"]
+    },
+    {
+      id: 94,
+      name: "Razer Blade 15 Gaming Laptop",
+      model: "Blade 15",
+      price: "$2,000",
+      description: "High-performance gaming laptop with a sleek design.",
+      image: "/images/razer-blade-15.jpg",
+      brand: "Razer",
+      category: "Gaming",
+      specs: ["Intel i7", "RTX 3070", "16GB RAM", "1TB SSD"]
+    },
+    {
+      id: 95,
+      name: "Asus ROG Strix G15 Gaming Laptop",
+      model: "ROG Strix G15",
+      price: "$1,500",
+      description: "Powerful gaming laptop with RGB lighting.",
+      image: "/images/asus-rog-strix-g15.jpg",
+      brand: "Asus",
+      category: "Gaming",
+      specs: ["AMD Ryzen 9", "RTX 3060", "16GB RAM", "1TB SSD"]
+    },
+    {
+      id: 96,
+      name: "Alienware m15 R6 Gaming Laptop",
+      model: "m15 R6",
+      price: "$2,200",
+      description: "High-performance gaming laptop with customizable RGB lighting.",
+      image: "/images/alienware-m15-r6.jpg",
+      brand: "Alienware",
+      category: "Gaming",
+      specs: ["Intel i7", "RTX 3080", "32GB RAM", "1TB SSD"]
+    },
+    {
+      id: 97,
+      name: "Logitech G Pro Wireless Gaming Mouse",
+      model: "G Pro Wireless",
+      price: "$150",
+      description: "Lightweight wireless gaming mouse with HERO sensor.",
+      image: "/images/logitech-g-pro-wireless.jpg",
+      brand: "Logitech",
+      category: "Gaming",
+      specs: ["16000 DPI", "Wireless", "Lightweight", "RGB"]
+    },
+    {
+      id: 98,
+      name: "Razer Kraken Ultimate Gaming Headset",
+      model: "Kraken Ultimate",
+      price: "$130",
+      description: "High-performance gaming headset with THX Spatial Audio.",
+      image: "/images/razer-kraken-ultimate.jpg",
+      brand: "Razer",
+      category: "Gaming",
+      specs: ["50mm drivers", "THX Spatial Audio", "RGB", "Comfortable design"]
+    },
+    {
+      id: 99,
+      name: "Corsair Void Elite RGB Wireless Gaming Headset",
+      model: "Void Elite RGB",
+      price: "$100",
+      description: "Wireless gaming headset with customizable RGB lighting.",
+      image: "/images/corsair-void-elite.jpg",
+      brand: "Corsair",
+      category: "Gaming",
+      specs: ["50mm drivers", "Wireless", "RGB", "Comfortable design"]
+    },
+    {
+      id: 100,
+      name: "SteelSeries Arctis Pro Wireless Gaming Headset",
+      model: "Arctis Pro Wireless",
+      price: "$300",
+      description: "High-performance wireless gaming headset with dual-battery system.",
+      image: "/images/steelseries-arctis-pro.jpg",
+      brand: "SteelSeries",
+      category: "Gaming",
+      specs: ["40mm drivers", "Wireless", "Dual-battery", "RGB"]
+    },
+  
+    // 📊 Software
+    {
+      id: 101,
+      name: "Microsoft 365 Business Premium",
+      model: "365 Business",
+      price: "$15/user/month",
+      description: "Cloud productivity suite with security features.",
+      image: "/images/microsoft-365.jpg",
+      trending: true,
+      brand: "Microsoft",
+      category: "Software",
+      specs: ["Office apps", "1TB OneDrive", "Advanced security", "24/7 support"]
+    },
+    {
+      id: 102,
+      name: "Adobe Creative Cloud",
+      model: "Creative Cloud",
+      price: "$52.99/month",
+      description: "All-in-one suite for creative professionals.",
+      image: "/images/adobe-creative-cloud.jpg",
+      brand: "Adobe",
+      category: "Software",
+      specs: ["Photoshop", "Illustrator", "Premiere Pro", "After Effects"]
+    },
+    {
+      id: 103,
+      name: "Slack Business+",
+      model: "Business+",
+      price: "$12.50/user/month",
+      description: "Team collaboration software with advanced features.",
+      image: "/images/slack-business.jpg",
+      brand: "Slack",
+      category: "Software",
+      specs: ["Unlimited integrations", "Advanced security", "24/7 support", "Custom retention"]
+    },
+    {
+      id: 104,
+      name: "Zoom Business",
+      model: "Business",
+      price: "$19.99/user/month",
+      description: "Video conferencing software with advanced features.",
+      image: "/images/zoom-business.jpg",
+      brand: "Zoom",
+      category: "Software",
+      specs: ["100 participants", "Cloud recording", "Custom branding", "24/7 support"]
+    },
+    {
+      id: 105,
+      name: "QuickBooks Online Plus",
+      model: "Online Plus",
+      price: "$70/month",
+      description: "Cloud accounting software for small businesses.",
+      image: "/images/quickbooks-online.jpg",
+      brand: "Intuit",
+      category: "Software",
+      specs: ["Invoicing", "Expense tracking", "Reporting", "24/7 support"]
+    },
+    {
+      id: 106,
+      name: "Salesforce Essentials",
+      model: "Essentials",
+      price: "$25/user/month",
+      description: "CRM software for small businesses.",
+      image: "/images/salesforce-essentials.jpg",
+      brand: "Salesforce",
+      category: "Software",
+      specs: ["Lead management", "Email integration", "Reporting", "24/7 support"]
+    },
+    {
+      id: 107,
+      name: "Dropbox Business Standard",
+      model: "Business Standard",
+      price: "$15/user/month",
+      description: "Cloud storage and file sharing software.",
+      image: "/images/dropbox-business.jpg",
+      brand: "Dropbox",
+      category: "Software",
+      specs: ["3TB storage", "File recovery", "Advanced security", "24/7 support"]
+    },
+    {
+      id: 108,
+      name: "Trello Business Class",
+      model: "Business Class",
+      price: "$12.50/user/month",
+      description: "Project management software with advanced features.",
+      image: "/images/trello-business.jpg",
+      brand: "Trello",
+      category: "Software",
+      specs: ["Unlimited boards", "Advanced checklists", "Custom backgrounds", "24/7 support"]
+    },
+    {
+      id: 109,
+      name: "Canva Pro",
+      model: "Pro",
+      price: "$12.99/month",
+      description: "Graphic design software with advanced features.",
+      image: "/images/canva-pro.jpg",
+      brand: "Canva",
+      category: "Software",
+      specs: ["Unlimited folders", "Brand kit", "Magic resize", "24/7 support"]
+    },
+    {
+      id: 110,
+      name: "HubSpot Marketing Hub Starter",
+      model: "Marketing Hub Starter",
+      price: "$50/month",
+      description: "Marketing automation software for small businesses.",
+      image: "/images/hubspot-marketing.jpg",
+      brand: "HubSpot",
+      category: "Software",
+      specs: ["Email marketing", "Forms", "Reporting", "24/7 support"]
+    }
+  ] as const; // Use 'as const' to make the array readonly and infer literal types
+
+  
+  // Helper function to generate categories
+export const productCategories = Array.from(
+  new Set(allProducts.map(product => product.category).filter(Boolean))
+) as string[];
