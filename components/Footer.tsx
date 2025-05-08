@@ -22,36 +22,7 @@ export default function CyberFooter() {
     { title: 'Legal', links: ['Privacy', 'Terms', 'Cookies'] },
   ]
 
-  const [countdown, setCountdown] = useState({
-    months: 0,
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
   
-  useEffect(() => {
-    const targetDate = new Date()
-    targetDate.setMonth(targetDate.getMonth() + 1) // 1 month from now
-  
-    const updateCountdown = () => {
-      const now = new Date().getTime()
-      const distance = targetDate.getTime() - now
-  
-      if (distance < 0) return
-  
-      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30))
-      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-  
-      setCountdown({ months, days, hours, minutes, seconds })
-    }
-  
-    const interval = setInterval(updateCountdown, 1000)
-    return () => clearInterval(interval)
-  }, [])
   
 
   return (
@@ -199,27 +170,6 @@ export default function CyberFooter() {
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  transition={{ delay: 0.7 }}
-  viewport={{ once: true }}
-  className="text-center text-sm text-cyan-300 mb-6 font-mono tracking-wide"
->
-  <span className="block">
-    🚀 Launching in:
-    <span className="ml-2 text-white">
-      {countdown.months.toString().padStart(2, '0')}:
-      {countdown.days.toString().padStart(2, '0')}:
-      {countdown.hours.toString().padStart(2, '0')}:
-      {countdown.minutes.toString().padStart(2, '0')}:
-      {countdown.seconds.toString().padStart(2, '0')}
-    </span>
-    <span className="ml-2 text-gray-400">(MM:DD:HH:MM:SS)</span>
-  </span>
-</motion.div>
-
 
       <motion.div
         initial={{ opacity: 0 }}
