@@ -102,7 +102,9 @@ export default function ServicesProvided() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
+              ref={(el) => {
+                cardsRef.current[index] = el;
+              }}
               className="relative p-8 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 group"
               whileHover={{ y: -8 }}
             >

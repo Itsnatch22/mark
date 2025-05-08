@@ -8,6 +8,7 @@ import CustomCursor from "@/components/CustomCursor";
 import { LoadingProvider } from "@/components/LoadingContext";
 import { AuthProvider } from "@/context/AuthContext";
 import AdminLoginModal from "@/components/AdminLoginModal";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 
 const playfairDisplay = Playfair_Display({ subsets: ['cyrillic'] });
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
@@ -34,6 +35,7 @@ export default function RootLayout({
         <CustomCursor />
           <AdminLoginModal />
         {children}
+        <CookieConsentBanner />
         <Footer />
       </body>
     </html>

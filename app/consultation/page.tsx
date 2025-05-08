@@ -17,7 +17,7 @@ export default function ConsultationPage() {
     'Custom Software'
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Form submission logic here
     setSubmitted(true);

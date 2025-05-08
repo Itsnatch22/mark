@@ -45,7 +45,7 @@ const testimonials = [
 ];
 
 export default function TestimonialsPage() {
-  const [ setActiveIndex] = useState(0);
+  const [, setActiveIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
   
   const swiperRef = useRef<SwiperRef | null>(null);
@@ -225,7 +225,7 @@ export default function TestimonialsPage() {
           transition={{ delay: 0.8 }}
         >
           <button
-            onClick={() => document.getElementById('video-modal')?.showModal()}
+            onClick={() => (document.getElementById('video-modal') as HTMLDialogElement)?.showModal()}
             className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">

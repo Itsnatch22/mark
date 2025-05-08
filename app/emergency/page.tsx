@@ -2,7 +2,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import io, { Socket } from 'socket.io-client';
+import io, { type Socket } from 'socket.io-client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Server, ShieldAlert, Users, MessageSquare, FileText, Bell, Wifi, WifiOff, Activity } from 'lucide-react';
 
@@ -33,7 +33,7 @@ export default function ICTPage() {
   const [chatMessages, setChatMessages] = useState<{ user: string; text: string; time: Date; isSystem?: boolean }[]>([]);
   const [activeTab, setActiveTab] = useState<'alerts' | 'team' | 'chat' | 'resources'>('alerts');
   const [newAlertForm, setNewAlertForm] = useState({ show: false, severity: 'medium' as ICTAlert['severity'], description: '' });
-  const socketRef = useRef<Socket | null>(null);
+  const socketRef = useRef<typeof Socket | null>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   // Initialize socket connection

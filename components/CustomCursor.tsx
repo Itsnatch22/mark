@@ -33,7 +33,7 @@ export default function SmartCursor() {
     let mouseY = 0;
 
     // Move cursor
-    const onMouseMove = (e) => {
+    const onMouseMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
       

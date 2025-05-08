@@ -52,14 +52,16 @@ export default function BadgeAward({
   );
 }
 
-const main = { backgroundColor: '#f6f9fc', fontFamily: 'Arial, sans-serif' };
-const container = { maxWidth: '600px', margin: '0 auto', padding: '20px' };
-const header = { textAlign: 'center', marginBottom: '32px' };
-const heading = { fontSize: '24px', color: '#333', fontWeight: 'bold' };
-const content = { backgroundColor: '#fff', padding: '24px', borderRadius: '8px' };
-const paragraph = { fontSize: '16px', color: '#555', lineHeight: '1.5' };
-const badgeContainer = { textAlign: 'center', margin: '24px 0' };
-const badgeImageStyle = { margin: '0 auto' };
-const badgeNameText = { fontSize: '20px', fontWeight: 'bold', marginTop: '16px' };
-const footer = { marginTop: '32px', textAlign: 'center' };
-const footerText = { fontSize: '12px', color: '#999' };
+import { CSSProperties } from 'react';
+
+const main: CSSProperties = { backgroundColor: '#f6f9fc', fontFamily: 'Arial, sans-serif' };
+const container: CSSProperties = { maxWidth: '600px', margin: '0 auto', padding: '20px' };
+const header: CSSProperties = { textAlign: 'center', marginBottom: '32px' };
+const heading: CSSProperties = { fontSize: '24px', color: '#333', fontWeight: 'bold' };
+const content: CSSProperties = { backgroundColor: '#fff', padding: '24px', borderRadius: '8px' };
+const paragraph: CSSProperties = { fontSize: '16px', color: '#555', lineHeight: '1.5' };
+const badgeContainer: CSSProperties = { textAlign: 'center', margin: '24px 0' };
+const badgeImageStyle: CSSProperties = { margin: '0 auto' };
+const badgeNameText: CSSProperties = { fontSize: '20px', fontWeight: 'bold', marginTop: '16px' };
+const footer: CSSProperties = { marginTop: '32px', textAlign: 'center' };
+const footerText: CSSProperties = { fontSize: '12px', color: '#999' };
