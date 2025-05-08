@@ -92,12 +92,6 @@ export default function SmartCursor() {
   }, []);
 
   // Variant styles
-  const variants = {
-    default: 'w-6 h-6 bg-white mix-blend-difference',
-    action: 'w-20 h-20 bg-transparent border-2 border-white',
-    media: 'w-16 h-16 bg-amber-500 text-white',
-    drag: 'w-12 h-12 bg-purple-500'
-  };
 
   return (
     <div 

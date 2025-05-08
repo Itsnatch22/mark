@@ -79,7 +79,7 @@ export default function CookieConsentBanner() {
                 <h3 className="text-lg font-medium text-gray-900">We value your privacy</h3>
                 <p className="mt-1 text-sm text-gray-600">
                   We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
-                  By clicking "Accept All", you consent to our use of cookies. You can manage your preferences below.
+                  By clicking &quot;Accept All&quot;, you consent to our use of cookies. You can manage your preferences below.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">

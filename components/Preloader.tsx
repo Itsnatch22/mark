@@ -3,12 +3,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import { usePathname } from "next/navigation";
 
 export default function Preloader() {
   const [percentage, setPercentage] = useState(0);
   const preloaderRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {

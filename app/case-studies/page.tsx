@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, Filter, ChevronDown } from 'lucide-react';
-
+import Image from 'next/image';
 type CaseStudy = {
   id: string;
   title: string;
@@ -301,7 +301,9 @@ export default function CaseStudiesPage() {
             >
               <div className="relative">
                 <div className="h-64 w-full overflow-hidden">
-                  <img
+                  <Image
+                    width={800}
+                    height={400}
                     src={selectedCase.image}
                     alt={selectedCase.title}
                     className="w-full h-full object-cover"

@@ -35,7 +35,7 @@ export default function ConsultationPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Let's Build <span className="text-orange-400">Your Solution</span>
+              Let&apos;s Build <span className="text-orange-400">Your Solution</span>
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl">
               Schedule a consultation with our experts to discuss your technology needs and discover tailored solutions.
@@ -67,7 +67,7 @@ export default function ConsultationPage() {
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
                 <p className="text-gray-600 mb-8">
-                  We've received your consultation request. Our team will contact you within 24 hours to schedule your session.
+                  We&apos;ve received your consultation request. Our team will contact you within 24 hours to schedule your session.
                 </p>
                 <button 
                   onClick={() => setSubmitted(false)}
