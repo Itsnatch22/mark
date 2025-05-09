@@ -69,3 +69,7 @@ export default function Preloader() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ea423b9b3c3e168e46c4aad828b06b5ab220efd7

@@ -28,14 +28,14 @@ const AboutDeveloper: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               className="text-2xl font-bold mb-2 text-center"
             >
-              Fra Mana
+              Mark
             </motion.h3>
             
             <motion.p 
               whileHover={{ scale: 1.02 }}
               className="text-purple-200 text-center mb-6"
             >
-              Problem Solver
+              Frontend Developer
             </motion.p>
             
             <div className="flex space-x-4">
@@ -64,7 +64,7 @@ const AboutDeveloper: React.FC = () => {
             <div className="flex items-center mb-6">
               <FiCode className="text-purple-400 mr-3 text-xl" />
               <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
-                Who's building Accternity?
+                Who's building Fincom Africa?
               </h2>
             </div>
             
@@ -74,7 +74,7 @@ const AboutDeveloper: React.FC = () => {
               transition={{ delay: 0.2 }}
               className="text-gray-300 mb-6 leading-relaxed text-lg"
             >
-              Hi, <span className="font-bold text-white">Fra Mana</span>. I've been building web applications for over <span className="text-purple-300">8 years</span>. I've worked with startups, small businesses, and large enterprises to build and scale their web applications. People call me a <span className="italic">"Full Stack" engineer!</span> but I prefer to call myself a <span className="font-bold text-white">problem solver</span> :)
+              Hi, <span className="font-bold text-white">Mark</span>. I've been building web applications for over <span className="text-purple-300">2 years</span>. I've worked with small projects, but I believe this wis my first full-stack application. People call me a <span className="italic">"Software Guru😂😂"</span> but I prefer to call myself a <span className="font-bold text-white">problem solver</span> :)
             </motion.p>
             
             <motion.p 
@@ -83,7 +83,7 @@ const AboutDeveloper: React.FC = () => {
               transition={{ delay: 0.4 }}
               className="text-gray-300 mb-8 leading-relaxed text-lg"
             >
-              I started <span className="text-white font-bold">Accternity</span> to help businesses build their web presence, providing unique web apps that <span className="underline decoration-purple-400">stand out</span> and <span className="underline decoration-pink-400">scale well</span>.
+              I started <span className="text-white font-bold">Fincom Africa</span> to help businesses build their web presence, providing unique web apps that <span className="underline decoration-purple-400">stand out</span> and <span className="underline decoration-pink-400">scale well</span>.
             </motion.p>
             
             <motion.div
